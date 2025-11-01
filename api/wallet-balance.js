@@ -21,8 +21,11 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Alchemy API key is not configured" });
   }
 
+  const network = "eth-mainnet";
+  const apiUrl = `https://${network}.g.alchemy.com/v2/${apiKey}`;
+  
   try {
-    const provider = new ethers.JsonRpcProvider(process.env.ALCHEMY_API_URL);
+    const provider = new ethers.JsonRpcProvider(apiUrl);
     const balance = await provider.getBalance(address);
     const formattedBalance = ethers.formatEther(balance);
 
