@@ -22,6 +22,7 @@
   "homepage": "https://github.com/ElifYagmurAlim/wallet-balance-api#readme",
   "dependencies": {
     "dotenv": "^17.2.3",
-    "ethers": "^6.15.0"
+    "ethers": "^6.15.0",
+    "node-cache": "^5.1.2"
   }
 }
