@@ -1,0 +1,27 @@
+{
+  "name": "wallet-balance-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --env-file=.env api/wallet-balance.js",
+    "dev": "node --env-file=.env --watch api/wallet-balance.js",
+    "test": "node --env-file=.env test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElifYagmurAlim/wallet-balance-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ElifYagmurAlim/wallet-balance-api/issues"
+  },
+  "homepage": "https://github.com/ElifYagmurAlim/wallet-balance-api#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ethers": "^6.15.0"
+  }
+}
