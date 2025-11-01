@@ -2,7 +2,7 @@ import 'dotenv/config';
 import { ethers } from "ethers"; // Ethers.js library for Ethereum interactions
 import NodeCache from "node-cache"; // In-memory caching
 
-const cache = new NodeCache({ stdTTL: 60 }); // Cache with a standard TTL of 60 seconds
+const cache = new NodeCache({ stdTTL: process.env.CACHE_TTL || 60 }); // Cache with a standard TTL from env or 60 seconds
 
 export default async function handler(req, res) { //versel serverless function
   if (req.method !== "GET") { //only allow GET requests
